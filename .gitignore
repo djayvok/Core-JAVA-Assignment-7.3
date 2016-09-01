@@ -1,0 +1,32 @@
+import java.util.*;
+public class Substring {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Please enter a String: ");
+        String s1 = input.next();
+        System.out.print("Substring you want to find: ");
+        String s2 = input.next();
+        char a[]=s1.toCharArray();
+    char b[]=s2.toCharArray();
+    int i=0;
+    int j=0;
+
+    while(i<a.length && j<b.length)
+    {
+        if(a[i]==b[j])
+        {
+            i++;
+            j++;
+        }
+        else
+        {
+            i++;
+            j=0;
+        }
+    }
+        if(j == b.length)
+            System.out.println("Substring Found");
+        else
+        System.out.println("Substring not Found");
+  }
+}
